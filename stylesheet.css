@@ -1,0 +1,45 @@
+footer,nav{
+  border:1.5px solid #6ea89f !important;
+}
+#students {
+  font-family: Arial, Helvetica, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 12px;
+}
+
+#students td, #students th {
+  border: 1.5px solid #aac16c;
+  padding: 8px;
+}
+#students tr:nth-child(odd){background-color: #ffffff;}
+#students tr:nth-child(even){background-color: #ebf2d3;}
+
+#students tr:hover {background-color: #ddd;}
+
+#students th {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  text-align: left;
+  background-color: #a7c93f;
+  color: #f5ffc5;
+}
+
+.footer p
+{
+  margin-top: 5px;
+  font-size: 14px;
+  color: #eafefd;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+footer
+{
+  bottom:0px;
+  text-align: center;
+  width:100%;
+  height:30px;
+  background-color: #46d7ac;
+  position:fixed;
+}
