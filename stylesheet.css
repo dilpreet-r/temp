@@ -1,6 +1,7 @@
 footer,nav{
   border:1.5px solid #6ea89f !important;
 }
+
 #students {
   font-family: Arial, Helvetica, sans-serif;
   border-collapse: collapse;
@@ -42,4 +43,9 @@ footer
   height:30px;
   background-color: #46d7ac;
   position:fixed;
+}
+.student-table
+{
+  height:68vh;
+  overflow-y: auto;
 }
