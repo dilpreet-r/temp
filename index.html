@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Student Enrollment Form</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <!-- Popper JS  -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="stylesheet.css">
+
+  </head>
+  <body>
+
+    <header>
+    <nav class="navbar navbar-expand-sm justify-content-center fixed-top" style="background-color: #46d7ac !important;color: #eafefd !important;">
+      <h4>Student Enrollment Form</h4>
+    </nav>
+    </header>
+    <br>
+    <br>
+    <br>
+    <div class="container-fluid ">
+      <div class="row">
+       <div class="col-sm-6 left-portion" style="padding-left:5%;padding-right:5%; ">
+         <div class="container">
+           <form id="newStudent" onsubmit="addRow(); return false" >
+             <br>
+
+             <div class="row">
+               <div class="col-sm-3  form-group">
+                 <label for="name">Name</label>
+               </div>
+               <div class="col-sm-6  form-group">
+                 <input type="text" class="form-control" id="name" required>
+                 <!-- <div class="invalid-feedback">Please fill out this field!</div> -->
+               </div>
+             </div>
+
+             <div class="row">
+               <div class="col-sm-3  form-group">
+                 <label for="email">Email</label>
+               </div>
+               <div class="col-sm-6  form-group">
+                 <input type="email" class="form-control" id="email" required>
+                 <!-- <div class="invalid-feedback">The e-mail is required!</div> -->
+               </div>
+             </div>
+
+             <div class="row">
+               <div class="col-sm-3  form-group">
+                 <label for="website">Website</label>
+               </div>
+               <div class="col-sm-6  form-group">
+                 <input type="text" class="form-control" pattern="(https?:\/\/)?([\w\d]+\.)?[\w\d]+\.\w+\/?.+" id="website" required>
+                 <!-- <div class="invalid-feedback">Website is required!</div> -->
+               </div>
+             </div>
+
+             <div class="row">
+               <div class="col-sm-3  form-group">
+                 <label for="image">Image link</label>
+               </div>
+               <div class="col-sm-6  form-group">
+                 <input type="url" class="form-control" id="image" required>
+                 <!-- <div class="invalid-feedback">URL is required!</div> -->
+               </div>
+             </div>
+
+             <div class="row">
+               <div class="col-sm-3  form-group">
+                 <label>Gender</label>
+               </div>
+               <div class="col-sm-6 ">
+                 <div class="form-check ">
+                  <label class="form-check-label" for="male">
+                    <input type="radio" class="form-check-input" id="male" name="gender" value="Male" checked>Male
+                  </label>
+                </div>
+                <div class="form-check">
+                  <label class="form-check-label" for="female">
+                    <input type="radio" class="form-check-input" id="female" name="gender" value="Female">Female
+                  </label>
+                </div>
+               </div>
+             </div>
+             <br>
+             <div class="row">
+               <div class="col-sm-3  form-group">
+                 <label>Skills</label>
+               </div>
+               <div class="col-sm-8 ">
+                 <div class="form-check-inline">
+                   <label class="form-check-label " for="java">
+                     <input type="checkbox" class="form-check-input lang" id="java" name="java" value="Java" checked>Java
+                   </label>
+                 </div>
+                 <div class="form-check-inline">
+                   <label class="form-check-label" for="html">
+                     <input type="checkbox" class="form-check-input lang" id="html" name="html" value="HTML">HTML
+                   </label>
+                 </div>
+                 <div class="form-check-inline">
+                   <label class="form-check-label" for="css">
+                     <input type="checkbox" class="form-check-input lang"  id="css" name="css" value="CSS">CSS
+                   </label>
+                 </div>
+               </div>
+             </div>
+             <br>
+             <div class="row">
+               <div class="col-sm-12  form-group">
+                 <button type="submit" class="btn btn-primary"> Enroll Student </button> &nbsp
+                 <button type="reset" class="btn btn-danger"> Clear </button>
+               </div>
+             </div>
+
+           </form>
+           <hr>
+         </div>
+       </div>
+       <div class="col-sm-6" style="padding-left:3%;padding-right:3%;" >
+         <div class="container a ">
+           <div class="row">
+             <div class="col-sm-12 text-center">
+               <h5>Enrolled Students</h5>
+               <br>
+             </div>
+           </div>
+             <div class="col-sm-12 student-table">
+             <table id="students">
+               <thead>
+               <tr>
+                 <th style="width:72%;">Description</th>
+                 <th style="width:28%;">Image</th>
+               </tr>
+               </thead>
+               <tbody>
+               <tr>
+                 <td>
+                   <strong>Dilpreet Singh</strong> <br>
+                   Male <br>
+                   dilpreetr18@gmail.com <br>
+                   <a href="#" target="_blank">www.google.com</a> <br>
+                   Java,CSS
+                 </td>
+                 <td> <img src="dilpreet.JPG" alt="" width=100%> </td>
+               </tr>
+             </tbody>
+             </table>
+           </div>
+           </div>
+         </div>
+       </div>
+     </div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <footer class="container-fluid text-center">
+      <div class="footer">
+        <p>Copyright 2020-2021 by Fresher Training</p>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+
+</html>
